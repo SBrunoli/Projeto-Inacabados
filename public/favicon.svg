@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- fundo -->
+  <rect width="64" height="64" rx="14" fill="#1E2C42"/>
+
+  <!-- trilho da barra -->
+  <rect x="10" y="38" width="44" height="8" rx="4" fill="#2A3C58"/>
+
+  <!-- parte preenchida (progresso) -->
+  <rect x="10" y="38" width="26" height="8" rx="4" fill="#E8703A"/>
+
+  <!-- textura hachurada na parte não concluída -->
+  <clipPath id="hatchClip">
+    <rect x="36" y="38" width="18" height="8" rx="4"/>
+  </clipPath>
+  <g clip-path="url(#hatchClip)">
+    <rect x="36" y="38" width="18" height="8" fill="#2A3C58"/>
+    <path d="M36 46 L44 38 M40 46 L48 38 M44 46 L52 38 M48 46 L56 38" stroke="#F2EFE9" stroke-opacity="0.25" stroke-width="1.5"/>
+  </g>
+
+  <!-- mastro da bandeira -->
+  <rect x="35" y="16" width="2" height="24" fill="#F2EFE9"/>
+
+  <!-- bandeira -->
+  <path d="M37 16 L52 20 L37 24 Z" fill="#E8703A"/>
+</svg>
