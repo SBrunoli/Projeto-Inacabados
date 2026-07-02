@@ -27,8 +27,8 @@ function Navbar() {
         </li>
       </ul>
 
-      {/* Botão */}
-      <a href="#" className={styles.btn}>
+      {/* Button */}
+      <a href="#" className={styles.navbar__btn}>
         Publicar o meu
       </a>
     </nav>
