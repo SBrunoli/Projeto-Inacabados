@@ -1,0 +1,10 @@
+.project {
+  width: 100%;
+  min-height: 32rem;
+  padding: 0 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}

@@ -1,0 +1,76 @@
+.projectCard {
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-surface);
+  transition: all 0.1s ease-in-out;
+}
+
+.projectCard:hover {
+  border: 1px solid var(--color-primary);
+  transform: translateY(-0.3rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+.projectCard__top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.projectCard__topCategory {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.projectCard__topStop {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+}
+
+.projectCard__title {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.projectCard__reason {
+  width: 70%;
+  min-height: 3rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+}
+
+.projectCard__bottom {
+  width: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectCard__bottomAuthor {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.projectCard__bottomBtn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.projectCard__bottomBtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  transition: all 0.2s ease;
+}
