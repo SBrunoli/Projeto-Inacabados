@@ -1,0 +1,29 @@
+.filters {
+  width: 100%;
+  height: 8vh;
+  margin-top: 3rem;
+  padding: 0rem 3rem;
+}
+
+.filters__list {
+  width: 100%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.filters__button {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.filters__button:focus {
+  background-color: var(--color-primary-dim);
+  color: var(--color-primary);
+}

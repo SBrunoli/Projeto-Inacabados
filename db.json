@@ -1,0 +1,228 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "API de receitas com IA",
+      "category": "codigo",
+      "progress": 68,
+      "stopped": "há 1 ano e 3 meses",
+      "author": "Marina T.",
+      "reason": "Travei tentando lidar com autenticação e perdi o ritmo."
+    },
+    {
+      "id": 2,
+      "title": "Cadeira de balanço em cedro",
+      "category": "marcenaria",
+      "progress": 40,
+      "stopped": "há 8 meses",
+      "author": "Diego R.",
+      "reason": "Faltou a curva do encosto — não tinha a ferramenta certa."
+    },
+    {
+      "id": 3,
+      "title": "O Silêncio das Cigarras",
+      "category": "escrita",
+      "progress": 82,
+      "stopped": "há 2 anos",
+      "author": "Helena V.",
+      "reason": "Cheguei no penúltimo capítulo e não soube como terminar."
+    },
+    {
+      "id": 4,
+      "title": "Jardim vertical de temperos",
+      "category": "jardim",
+      "progress": 25,
+      "stopped": "há 5 meses",
+      "author": "Otávio P.",
+      "reason": "Mudei de apartamento antes de montar a irrigação."
+    },
+    {
+      "id": 5,
+      "title": "EP de 5 faixas lo-fi",
+      "category": "musica",
+      "progress": 55,
+      "stopped": "há 1 ano",
+      "author": "Bea K.",
+      "reason": "Gravei tudo, mas nunca fiz a mixagem final."
+    },
+    {
+      "id": 6,
+      "title": "Vestido de festa junina",
+      "category": "costura",
+      "progress": 90,
+      "stopped": "há 3 meses",
+      "author": "Sueli M.",
+      "reason": "Só faltava a barra e o forro — perdi o prazo da festa."
+    },
+    {
+      "id": 7,
+      "title": "Robô seguidor de linha",
+      "category": "codigo",
+      "progress": 33,
+      "stopped": "há 6 meses",
+      "author": "Kaique F.",
+      "reason": "O sensor chegou errado e o projeto esfriou."
+    },
+    {
+      "id": 8,
+      "title": "Estante flutuante de nogueira",
+      "category": "marcenaria",
+      "progress": 15,
+      "stopped": "há 1 ano e 8 meses",
+      "author": "Ana Lu.",
+      "reason": "Cortei as tábuas e nunca liguei a lixadeira de novo."
+    },
+    {
+      "id": 9,
+      "title": "Clone do Spotify em React",
+      "category": "codigo",
+      "progress": 71,
+      "stopped": "há 4 meses",
+      "author": "Rafael S.",
+      "reason": "Comecei um emprego novo e o projeto pessoal ficou de lado."
+    },
+    {
+      "id": 10,
+      "title": "Extensão de Chrome para produtividade",
+      "category": "codigo",
+      "progress": 20,
+      "stopped": "há 2 anos e 1 mês",
+      "author": "Priscila N.",
+      "reason": "Descobri que já existia algo parecido e desanimei."
+    },
+    {
+      "id": 11,
+      "title": "Mesa de centro com pallets",
+      "category": "marcenaria",
+      "progress": 60,
+      "stopped": "há 1 ano",
+      "author": "Fernando A.",
+      "reason": "A lixa que eu precisava nunca chegou e esqueci do projeto na garagem."
+    },
+    {
+      "id": 12,
+      "title": "Caixa de ferramentas em carvalho",
+      "category": "marcenaria",
+      "progress": 78,
+      "stopped": "há 2 meses",
+      "author": "Camila D.",
+      "reason": "Faltavam só as dobradiças, mas mudei de cidade antes de terminar."
+    },
+    {
+      "id": 13,
+      "title": "Romance 'As Marés de Setembro'",
+      "category": "escrita",
+      "progress": 45,
+      "stopped": "há 3 anos",
+      "author": "Leonardo M.",
+      "reason": "Perdi o fio da história no meio do segundo ato."
+    },
+    {
+      "id": 14,
+      "title": "Zine sobre plantas urbanas",
+      "category": "escrita",
+      "progress": 95,
+      "stopped": "há 1 mês",
+      "author": "Yasmin C.",
+      "reason": "Só falta revisar a última página, mas travei no perfeccionismo."
+    },
+    {
+      "id": 15,
+      "title": "Blog pessoal sobre viagens de trem",
+      "category": "escrita",
+      "progress": 30,
+      "stopped": "há 7 meses",
+      "author": "Gustavo R.",
+      "reason": "Escrevi três posts e perdi o hábito de continuar."
+    },
+    {
+      "id": 16,
+      "title": "Horta suspensa de garrafas PET",
+      "category": "jardim",
+      "progress": 50,
+      "stopped": "há 9 meses",
+      "author": "Isabela F.",
+      "reason": "As mudas morreram no inverno e não tive coragem de recomeçar."
+    },
+    {
+      "id": 17,
+      "title": "Composteira caseira no quintal",
+      "category": "jardim",
+      "progress": 65,
+      "stopped": "há 4 meses",
+      "author": "Thiago B.",
+      "reason": "Comecei a dar cheiro ruim e parei pra pesquisar o que fiz errado."
+    },
+    {
+      "id": 18,
+      "title": "Jardim de suculentas na varanda",
+      "category": "jardim",
+      "progress": 10,
+      "stopped": "há 1 ano e 2 meses",
+      "author": "Renata L.",
+      "reason": "Comprei os vasos e nunca cheguei a plantar nada."
+    },
+    {
+      "id": 19,
+      "title": "Álbum acústico de covers",
+      "category": "musica",
+      "progress": 38,
+      "stopped": "há 1 ano e 5 meses",
+      "author": "Pedro H.",
+      "reason": "O violão desafinou de vez e nunca levei pro conserto."
+    },
+    {
+      "id": 20,
+      "title": "Trilha sonora para curta-metragem",
+      "category": "musica",
+      "progress": 72,
+      "stopped": "há 5 meses",
+      "author": "Juliana O.",
+      "reason": "O diretor do curta sumiu e o projeto ficou parado junto."
+    },
+    {
+      "id": 21,
+      "title": "Podcast sobre música brasileira",
+      "category": "musica",
+      "progress": 22,
+      "stopped": "há 10 meses",
+      "author": "Vinícius T.",
+      "reason": "Gravei o piloto e travei na edição de áudio."
+    },
+    {
+      "id": 22,
+      "title": "Bolsa de retalhos de jeans",
+      "category": "costura",
+      "progress": 58,
+      "stopped": "há 6 meses",
+      "author": "Débora S.",
+      "reason": "Errei o corte da alça e não tive paciência de refazer."
+    },
+    {
+      "id": 23,
+      "title": "Edredom de patchwork",
+      "category": "costura",
+      "progress": 35,
+      "stopped": "há 1 ano e 1 mês",
+      "author": "Cristina P.",
+      "reason": "É um projeto gigante e fui perdendo o fôlego aos poucos."
+    },
+    {
+      "id": 24,
+      "title": "Fantasia de carnaval sob medida",
+      "category": "costura",
+      "progress": 12,
+      "stopped": "há 3 meses",
+      "author": "Larissa G.",
+      "reason": "O carnaval passou antes de eu terminar e perdi a urgência."
+    }
+  ],
+  "categories": [
+    { "id": "codigo", "label": "Código" },
+    { "id": "marcenaria", "label": "Marcenaria" },
+    { "id": "escrita", "label": "Escrita" },
+    { "id": "jardim", "label": "Jardim" },
+    { "id": "musica", "label": "Música" },
+    { "id": "costura", "label": "Costura" }
+  ]
+}
