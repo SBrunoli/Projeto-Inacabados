@@ -1,0 +1,33 @@
+.infos {
+  width: 100%;
+  min-height: 20vh;
+  margin-top: 2rem;
+  padding: 0rem 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.infos__container {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.infos__title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.infos__text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
