@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import PublishProject from "./components/PublishProject/PublishProject";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [category, setCategory] = useState("todos");
@@ -19,6 +20,7 @@ function App() {
       <Projects activeCategory={category} />
       <HowItWorks />
       <PublishProject />
+      <Footer />
     </>
   );
 }
