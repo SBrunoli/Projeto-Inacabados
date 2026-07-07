@@ -6,7 +6,12 @@ interface Categories {
   label: string;
 }
 
-function Filters() {
+interface FiltersProps {
+  activeCategory: string;
+  handleCategory: (category: string) => void;
+}
+
+function Filters({ activeCategory, handleCategory }: FiltersProps) {
   const [filters, setFilters] = useState<Categories[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -31,11 +36,21 @@ function Filters() {
     <div className={styles.filters}>
       <ul className={styles.filters__list}>
         <li>
-          <button className={styles.filters__button}>Todos</button>
+          <button
+            className={`${styles.filters__button} ${activeCategory === "todos" ? styles["filters__button--active"] : ""}`}
+            onClick={() => handleCategory("todos")}
+          >
+            Todos
+          </button>
         </li>
         {filters.map((category) => (
           <li key={category.id}>
-            <button className={styles.filters__button}>{category.label}</button>
+            <button
+              className={`${styles.filters__button} ${activeCategory === category.id ? styles["filters__button--active"] : ""}`}
+              onClick={() => handleCategory(category.id)}
+            >
+              {category.label}
+            </button>
           </li>
         ))}
       </ul>

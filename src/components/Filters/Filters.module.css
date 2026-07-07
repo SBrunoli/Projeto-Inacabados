@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-.filters__button:focus {
+.filters__button--active {
   background-color: var(--color-primary-dim);
   color: var(--color-primary);
 }

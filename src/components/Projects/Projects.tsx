@@ -12,16 +12,21 @@ interface Project {
   reason: string;
 }
 
+interface ProjectsProps {
+  activeCategory: string;
+}
+
 const INITIAL_VISIBLE = 10;
 const LOAD_STEP = 10;
 
-function Projects() {
+function Projects({ activeCategory }: ProjectsProps) {
   const [projects, setProjects] = useState<Project[]>([]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  // Quantidade de projetos visíveis na tela
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
-  //requisition to fetch projects from the API
+  // Busca os projetos na API assim que o componente é montado
   useEffect(() => {
     fetch("http://localhost:3000/projects")
       .then((response) => {
@@ -35,12 +40,29 @@ function Projects() {
       .finally(() => setLoading(false));
   }, []);
 
+  // Sempre que o filtro de categoria mudar, volta a quantidade
+  // visível pro valor inicial (evita carregar "sobras" do filtro anterior)
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE);
+  }, [activeCategory]);
+
   if (loading) return <p>Carregando projetos...</p>;
   if (error) return <p>Erro: {error.message}</p>;
 
-  const visibleProjects = projects.slice(0, visibleCount);
-  const hasMore = visibleCount < projects.length;
+  // Se a categoria ativa for "todos", mostra tudo;
+  // senão, filtra só os projetos da categoria selecionada
+  const filteredProjects =
+    activeCategory === "todos"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
+  // Corta a lista filtrada, mostrando só a quantidade permitida agora
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+
+  // Verdadeiro quando ainda existem projetos escondidos pra mostrar
+  const hasMore = visibleCount < filteredProjects.length;
+
+  // Carrega mais projetos ao clicar no botão
   const handleLoadMore = () => {
     setVisibleCount((current) => current + LOAD_STEP);
   };
@@ -53,13 +75,14 @@ function Projects() {
         ))}
       </div>
 
+      {/* Só mostra o botão "carregar mais" se ainda houver projetos escondidos */}
       {hasMore && (
         <div className={styles.project__footer}>
           <button className={styles.project__loadMore} onClick={handleLoadMore}>
             Carregar mais projetos
           </button>
           <span className={styles.project__counter}>
-            {visibleCount} de {projects.length}
+            {visibleCount} de {filteredProjects.length}
           </span>
         </div>
       )}
