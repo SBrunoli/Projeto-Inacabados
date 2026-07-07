@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Infos from "./components/Infos/Infos";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
 
 function App() {
   const [category, setCategory] = useState("todos");
@@ -15,6 +16,7 @@ function App() {
       <Infos />
       <Filters activeCategory={category} handleCategory={setCategory} />
       <Projects activeCategory={category} />
+      <HowItWorks />
     </>
   );
 }

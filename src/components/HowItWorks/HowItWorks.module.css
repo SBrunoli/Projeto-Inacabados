@@ -1,0 +1,45 @@
+.howItWorks {
+  width: 100%;
+  height: fit-content;
+  padding: 0 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.howItWorks__title {
+  max-width: 30%;
+  font-size: 1.7em;
+  color: var(--color-text-primary);
+}
+
+.howItWorks__cardsConteiner {
+  width: 100%;
+  margin: 2rem 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.howItWorks__cards {
+  width: fit-content;
+  padding: 0.5rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+.howItWorks__cardsSpan {
+  color: var(--color-primary);
+}
+
+.howItWorks__cardsTitle {
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.howItWorks__cardDescription {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
