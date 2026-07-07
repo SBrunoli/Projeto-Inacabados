@@ -43,6 +43,7 @@ function Projects({ activeCategory }: ProjectsProps) {
   // Sempre que o filtro de categoria mudar, volta a quantidade
   // visível pro valor inicial (evita carregar "sobras" do filtro anterior)
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisibleCount(INITIAL_VISIBLE);
   }, [activeCategory]);
 

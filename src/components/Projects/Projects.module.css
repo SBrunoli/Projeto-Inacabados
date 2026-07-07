@@ -1,14 +1,15 @@
 .project {
   width: 100%;
-  padding: 0 3rem;
+  padding: 0 3rem 4rem;
 }
 
 .project__grid {
   width: 100%;
-  min-height: 32rem;
+  min-height: 10rem;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: start;
   gap: 2rem;
 }
 
