@@ -64,7 +64,7 @@
 }
 
 .hero__search {
-  width: fit-content;
+  width: 90vw;
   height: 3rem;
   margin-top: 4rem;
   padding: 0 0.3rem 0rem 1rem;
@@ -83,7 +83,7 @@
 }
 
 .hero__searchInput {
-  width: 25rem;
+  width: 100%;
   background-color: transparent;
   border: none;
   outline: none;
@@ -94,4 +94,27 @@
 .hero__searchInput::placeholder {
   color: var(--color-text-secondary);
   font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .hero__title {
+    width: 100%;
+  }
+
+  .hero__description {
+    width: 100%;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

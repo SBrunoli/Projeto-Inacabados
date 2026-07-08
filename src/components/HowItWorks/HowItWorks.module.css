@@ -8,7 +8,7 @@
 }
 
 .howItWorks__title {
-  max-width: 30%;
+  width: 30%;
   font-size: 1.7em;
   color: var(--color-text-primary);
 }
@@ -24,7 +24,7 @@
 }
 
 .howItWorks__cards {
-  width: fit-content;
+  width: 100%;
   padding: 0.5rem;
   border-left: 2px solid var(--color-primary);
 }
@@ -42,4 +42,20 @@
 .howItWorks__cardDescription {
   font-size: 0.8rem;
   color: var(--color-text-secondary);
+}
+
+@media (max-width: 720px) {
+  .howItWorks__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .howItWorks__cardsConteiner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .howItWorks__cards {
+    flex: 1;
+  }
 }

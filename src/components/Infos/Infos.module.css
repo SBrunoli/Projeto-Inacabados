@@ -31,3 +31,9 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
+@media (max-width: 720px) {
+  .infos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

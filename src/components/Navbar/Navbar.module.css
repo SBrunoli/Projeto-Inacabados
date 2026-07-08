@@ -59,3 +59,13 @@
   font-weight: 600;
   border-radius: 0.3rem;
 }
+
+@media (max-width: 720px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .list {
+    display: none;
+  }
+}

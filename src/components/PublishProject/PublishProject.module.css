@@ -7,7 +7,7 @@
 
 .PublishProject__box {
   width: 100%;
-  height: 12rem;
+  min-height: 12rem;
   padding: 0 3rem;
   background-color: var(--color-surface);
   border: 1px dashed var(--color-text-primary);
@@ -34,4 +34,13 @@
   font-weight: 600;
   background-color: var(--color-primary);
   color: var(--color-text-on-primary);
+}
+
+@media (max-width: 720px) {
+  .PublishProject__box {
+    text-align: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
 }

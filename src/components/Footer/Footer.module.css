@@ -14,3 +14,10 @@
   text-decoration: underline;
   color: var(--color-primary);
 }
+
+@media (max-width: 720px) {
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
