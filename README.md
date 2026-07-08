@@ -41,7 +41,7 @@ Cada card exibe uma barra de progresso "travada" — parte preenchida em laranja
 | ⚡ **Vite** | Build tool e ambiente de desenvolvimento |
 | 🎨 **CSS Modules** | Estilização isolada por componente |
 | 🗂️ **json-server** | API REST fake para simular o backend durante o desenvolvimento |
-| 🧩 **Lucide Icons** | Ícones utilizados na interface |
+| 🧩 **Font Awesome** | Ícones utilizados na interface |
 
 ---
 
@@ -58,7 +58,9 @@ src/
 │   ├── ProjectsCards/
 │   ├── HowItWorks/
 │   ├── PublishProject/
-│   └── Footer/
+│   |── Footer/
+│   └─ UI/
+│   |  ├── ProgressBar/
 ├── App.tsx
 ├── index.css
 └── main.tsx
