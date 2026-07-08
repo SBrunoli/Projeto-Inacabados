@@ -3,9 +3,16 @@ import styles from "./Hero.module.css";
 interface HeroProps {
   categoriesCount: number;
   stoppedProjectsCount: number;
+  searchValue: string;
+  handleSearch: (value: string) => void;
 }
 
-function Hero({ categoriesCount, stoppedProjectsCount }: HeroProps) {
+function Hero({
+  categoriesCount,
+  stoppedProjectsCount,
+  handleSearch,
+  searchValue,
+}: HeroProps) {
   return (
     <section className={styles.hero}>
       {/* Categories and Projects */}
@@ -47,10 +54,17 @@ function Hero({ categoriesCount, stoppedProjectsCount }: HeroProps) {
         <i
           className={`fa-solid fa-magnifying-glass ${styles.hero__searchIcon}`}
         ></i>
-        <form className={styles.hero__searchForm}>
+        <form
+          className={styles.hero__searchForm}
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
           <input
             type="text"
             placeholder="Buscar projetos..."
+            value={searchValue}
+            onChange={(e) => handleSearch(e.target.value)}
             className={styles.hero__searchInput}
           />
         </form>

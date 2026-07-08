@@ -45,3 +45,14 @@
   font-size: 12px;
   color: var(--color-text-secondary);
 }
+
+.project__empty {
+  width: 90%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: 3rem;
+}

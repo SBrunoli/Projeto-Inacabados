@@ -29,6 +29,7 @@ function App() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searched, setSearched] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -71,6 +72,8 @@ function App() {
       <Hero
         categoriesCount={categories.length}
         stoppedProjectsCount={projects.length}
+        searchValue={searched}
+        handleSearch={setSearched}
       />
       <Infos projects={projects} categories={categories} />
       <Filters
@@ -78,7 +81,11 @@ function App() {
         handleCategory={setCategory}
         categories={categories}
       />
-      <Projects activeCategory={category} projects={projects} />
+      <Projects
+        activeCategory={category}
+        projects={projects}
+        searchValue={searched}
+      />
       <HowItWorks />
       <PublishProject />
       <Footer />
