@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Filters.module.css";
 
 interface Category {
@@ -12,13 +13,36 @@ interface FiltersProps {
 }
 
 function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
+  // controla se o dropdown está aberto ou fechado (só importa no mobile)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const activeLabel =
+    activeCategory === "todos"
+      ? "Todos"
+      : (categories.find((c) => c.id === activeCategory)?.label ?? "Todos");
+
+  const handleSelect = (id: string) => {
+    handleCategory(id);
+    setIsOpen(false);
+  };
+
   return (
     <div className={styles.filters}>
-      <ul className={styles.filters__list}>
+      {/* botão só aparece no mobile via CSS */}
+      <button
+        className={styles.filters__toggle}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
+        {activeLabel} {isOpen ? "▲" : "▼"}
+      </button>
+
+      <ul
+        className={`${styles.filters__list} ${isOpen ? styles["filters__list--open"] : ""}`}
+      >
         <li>
           <button
             className={`${styles.filters__button} ${activeCategory === "todos" ? styles["filters__button--active"] : ""}`}
-            onClick={() => handleCategory("todos")}
+            onClick={() => handleSelect("todos")}
           >
             Todos
           </button>
@@ -27,7 +51,7 @@ function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
           <li key={category.id}>
             <button
               className={`${styles.filters__button} ${activeCategory === category.id ? styles["filters__button--active"] : ""}`}
-              onClick={() => handleCategory(category.id)}
+              onClick={() => handleSelect(category.id)}
             >
               {category.label}
             </button>

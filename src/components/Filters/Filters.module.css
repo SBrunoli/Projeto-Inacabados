@@ -1,13 +1,29 @@
 .filters {
   width: 100%;
-  height: 8vh;
-  margin-top: 3rem;
+  margin: 3rem 0;
   padding: 0rem 3rem;
+  position: relative;
+}
+
+.filters__toggle {
+  display: none;
+  width: 100%;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .filters__list {
-  width: 100%;
+  height: fit-content;
   list-style: none;
+  margin: 0;
+  padding: 0;
 
   display: flex;
   align-items: center;
@@ -21,9 +37,43 @@
   border: 1px solid var(--color-primary);
   border-radius: 1rem;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .filters__button--active {
   background-color: var(--color-primary-dim);
   color: var(--color-primary);
+}
+
+@media (max-width: 720px) {
+  .filters__toggle {
+    display: block;
+  }
+
+  .filters__list {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+
+    position: absolute;
+    top: 100%;
+    left: 3rem;
+    right: 3rem;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+
+  .filters__list--open {
+    display: flex;
+  }
+
+  .filters__button {
+    width: 100%;
+    text-align: left;
+  }
 }
