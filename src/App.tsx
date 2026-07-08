@@ -68,7 +68,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero
+        categoriesCount={categories.length}
+        stoppedProjectsCount={projects.length}
+      />
       <Infos projects={projects} categories={categories} />
       <Filters
         activeCategory={category}

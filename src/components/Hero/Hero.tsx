@@ -1,13 +1,18 @@
 import styles from "./Hero.module.css";
 
-function Hero() {
+interface HeroProps {
+  categoriesCount: number;
+  stoppedProjectsCount: number;
+}
+
+function Hero({ categoriesCount, stoppedProjectsCount }: HeroProps) {
   return (
     <section className={styles.hero}>
       {/* Categories and Projects */}
       <ul className={styles.hero__infos}>
-        <li>8 categorias ativas</li>
+        <li>{categoriesCount} categorias ativas</li>
         <li>|</li>
-        <li>1842 projetos parados</li>
+        <li>{stoppedProjectsCount} projetos parados</li>
       </ul>
 
       {/* title */}
