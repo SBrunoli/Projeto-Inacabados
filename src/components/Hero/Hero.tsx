@@ -42,8 +42,12 @@ function Hero() {
         <i
           className={`fa-solid fa-magnifying-glass ${styles.hero__searchIcon}`}
         ></i>
-        <form>
-          <input type="text" placeholder="Buscar projetos..." className={styles.hero__searchInput} />
+        <form className={styles.hero__searchForm}>
+          <input
+            type="text"
+            placeholder="Buscar projetos..."
+            className={styles.hero__searchInput}
+          />
         </form>
       </div>
     </section>

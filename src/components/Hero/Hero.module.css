@@ -64,7 +64,7 @@
 }
 
 .hero__search {
-  width: 90vw;
+  width: 30vw;
   height: 3rem;
   margin-top: 4rem;
   padding: 0 0.3rem 0rem 1rem;
@@ -77,13 +77,18 @@
   gap: 1rem;
 }
 
+.hero__searchForm {
+  flex: 1;
+  display: flex;
+}
+
 .hero__searchIcon {
   font-size: 1.2rem;
   color: var(--color-primary);
 }
 
 .hero__searchInput {
-  width: 100%;
+  flex: 1;
   background-color: transparent;
   border: none;
   outline: none;
@@ -116,5 +121,9 @@
   .hero__buttons {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .hero__search {
+    width: 90vw;
   }
 }
