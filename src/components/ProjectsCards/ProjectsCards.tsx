@@ -1,4 +1,4 @@
-import ProgressBar from "../ProgressBar/ProgressBar";
+import ProgressBar from "../UI/ProgressBar/ProgressBar";
 import styles from "./ProjectsCars.module.css";
 
 interface Project {
