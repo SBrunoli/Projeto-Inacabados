@@ -12,6 +12,16 @@ Uma plataforma para adotar projetos abandonados de outras pessoas — código, m
 
 ---
 
+## 👁️‍🗨️ Preview
+
+<div align="center">
+
+<img width="1280" height="630" alt="chrome-capture-2026-07-13 (2)" src="https://github.com/user-attachments/assets/5da5c08b-3fbe-4d89-bc1b-8088d6c62bf3" />
+
+</div>
+
+---
+
 ## 📖 Sobre o projeto
 
 **Inacabados** nasceu de uma ideia simples: todo mundo já largou algo pela metade — um app, uma cadeira, um livro, um jardim, uma música. Em vez de deixar essas ideias morrerem esquecidas, o Inacabados conecta quem abandonou um projeto com alguém disposto a continuar, mostrando exatamente **em que ponto a pessoa parou** e **por quê**.
