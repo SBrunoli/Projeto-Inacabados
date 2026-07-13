@@ -8,6 +8,10 @@ Uma plataforma para adotar projetos abandonados de outras pessoas — código, m
 
 <img src="https://skillicons.dev/icons?i=react,typescript,vite,css,html" />
 
+<br /><br />
+
+[![Ver projeto ao vivo](https://img.shields.io/badge/🔴_Ver_projeto_ao_vivo-E8703A?style=for-the-badge&logoColor=white)](https://sbrunoli.github.io/Projeto-Inacabados/)
+
 </div>
 
 ---
@@ -50,8 +54,9 @@ Cada card exibe uma barra de progresso "travada" — parte preenchida em laranja
 | 🔷 **TypeScript** | Tipagem estática de props, states e dados da API |
 | ⚡ **Vite** | Build tool e ambiente de desenvolvimento |
 | 🎨 **CSS Modules** | Estilização isolada por componente |
-| 🗂️ **json-server** | API REST fake para simular o backend durante o desenvolvimento |
+| 🗂️ **json-server** | API REST fake, hospedada no [Render](https://render.com) em produção |
 | 🧩 **Font Awesome** | Ícones utilizados na interface |
+| 📄 **GitHub Pages** | Hospedagem do front-end |
 
 ---
 
@@ -68,9 +73,9 @@ src/
 │   ├── ProjectsCards/
 │   ├── HowItWorks/
 │   ├── PublishProject/
-│   |── Footer/
-│   └─ UI/
-│   |  ├── ProgressBar/
+│   ├── Footer/
+│   └── UI/
+│       └── ProgressBar/
 ├── App.tsx
 ├── index.css
 └── main.tsx
@@ -83,7 +88,11 @@ Cada componente possui seu próprio arquivo `.module.css`, mantendo estilos isol
 
 ## 🔌 API (json-server)
 
-O projeto consome uma API REST fake, criada com [json-server](https://github.com/typicode/json-server), a partir do arquivo `db.json`.
+O projeto consome uma API REST fake, criada com [json-server](https://github.com/typicode/json-server), a partir de um `db.json`.
+
+Em produção, essa API roda hospedada gratuitamente no **Render**, num repositório separado ([`inacabados-api`](https://github.com/SBrunoli)), e é essa versão em nuvem que o site publicado no GitHub Pages consome.
+
+> ⚠️ Por estar no plano gratuito do Render, a API "dorme" após 15 minutos sem uso. A primeira requisição depois de um tempo parado pode levar de 30 a 60 segundos para responder, enquanto o serviço reinicia.
 
 ### Endpoints disponíveis
 
@@ -117,13 +126,15 @@ interface Category {
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 💻 Rodando o projeto localmente
+
+Quer rodar na sua máquina, em vez de só acessar o link publicado? Siga os passos abaixo.
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/inacabados.git
-cd inacabados
+git clone https://github.com/SBrunoli/Projeto-Inacabados.git
+cd Projeto-Inacabados
 ```
 
 ### 2. Instale as dependências
@@ -132,19 +143,18 @@ cd inacabados
 npm install
 ```
 
-### 3. Suba a API fake (json-server)
+### 3. Escolha a API que vai usar
 
-Em um terminal separado, na raiz do projeto:
+**Opção A — usar a API já hospedada no Render (mais rápido, nada para configurar):**
+O projeto já vem configurado para consumir a API em produção. Pule direto para o passo 4.
 
+**Opção B — rodar sua própria API local (útil se quiser testar `POST`/`PATCH`/`DELETE` sem afetar os dados em produção):**
 ```bash
 npx json-server --watch db.json --port 3000
 ```
-
-A API ficará disponível em `http://localhost:3000`.
+Depois, troque as URLs de `fetch` no `App.tsx` para `http://localhost:3000`.
 
 ### 4. Rode o projeto
-
-Em outro terminal:
 
 ```bash
 npm run dev
@@ -152,14 +162,11 @@ npm run dev
 
 O projeto estará disponível em `http://localhost:5173` (ou a porta indicada pelo Vite).
 
-> ⚠️ É necessário que a API (json-server) esteja rodando **antes** de abrir o front-end, senão os projetos e categorias não serão carregados.
-
 ---
-
 
 ## 📌 Status do projeto
 
-🚧 **Em desenvolvimento** — projeto de estudo, construído para praticar React, TypeScript, consumo de API e boas práticas de organização de componentes.
+🚧 **Em desenvolvimento** — projeto de estudo, construído para praticar React, TypeScript, consumo de API, deploy e boas práticas de organização de componentes.
 
 ---
 
