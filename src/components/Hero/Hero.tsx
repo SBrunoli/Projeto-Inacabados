@@ -38,7 +38,7 @@ function Hero({
       {/* Button */}
       <ul className={styles.hero__buttons}>
         <li>
-          <a href="#" className={styles.hero__btn}>
+          <a href="#projects" className={styles.hero__btn}>
             Explorar Projetos
           </a>
         </li>

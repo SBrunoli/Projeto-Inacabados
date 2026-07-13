@@ -47,7 +47,7 @@ function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {
   };
 
   return (
-    <div className={styles.project}>
+    <div id="projects" className={styles.project}>
       {hasNoResults ? (
         <p className={styles.project__empty}>
           Nenhum Projeto Encontrado para esses filtros.
