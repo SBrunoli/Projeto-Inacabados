@@ -31,12 +31,14 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [searched, setSearched] = useState("");
 
+  const API_URL = "https://inacabados-api.onrender.com";
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [projectsResponse, categoriesResponse] = await Promise.all([
-          fetch("http://localhost:3000/projects"),
-          fetch("http://localhost:3000/categories"),
+          fetch(`${API_URL}/projects`),
+          fetch(`${API_URL}/categories`),
         ]);
 
         if (!projectsResponse.ok || !categoriesResponse.ok) {
