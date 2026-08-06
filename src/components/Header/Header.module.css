@@ -13,10 +13,6 @@
   font-weight: 600;
 }
 
-.header__logoSpan {
-  color: var(--color-primary);
-}
-
 .header__nav {
   list-style: none;
 
@@ -37,10 +33,6 @@
 }
 
 @media (max-width: 720px) {
-  .header {
-    padding: 0 var(--space-1);
-  }
-
   .header__nav {
     display: none;
   }

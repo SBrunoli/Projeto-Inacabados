@@ -5,7 +5,7 @@ function Header() {
     <header className={`section ${styles.header}`}>
       {/* logo */}
       <a href="/" className={styles.header__logo}>
-        Inacaba<span className={styles.header__logoSpan}>dos</span>
+        Inacaba<span className="accent">dos</span>
       </a>
 
       {/* links */}
