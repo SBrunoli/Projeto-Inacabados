@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Filters from "./components/Filters/Filters";
 import Hero from "./components/Hero/Hero";
 import Infos from "./components/Infos/Infos";
-import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 import Projects from "./components/Projects/Projects";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import PublishProject from "./components/PublishProject/PublishProject";
@@ -69,8 +69,8 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar />
+    <div className="app">
+      <Header />
       <Hero
         categoriesCount={categories.length}
         stoppedProjectsCount={projects.length}
@@ -91,7 +91,7 @@ function App() {
       <HowItWorks />
       <PublishProject />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Unbounded:wght@200..900&display=swap");
 
 :root {
   --color-primary: #e8703a;
@@ -9,6 +9,17 @@
   --color-text-primary: #f2efe9;
   --color-text-secondary: #bfb6a3;
   --color-text-on-primary: #12192a;
+
+  --space-1: 1rem;
+  --space-2: 2rem;
+  --space-3: 3rem;
+  --space-4: 4rem;
+  --space-5: 5rem;
+
+  --font-body: "Poppins", sans-serif;
+  --font-heading: "Unbounded", cursive;
+
+  --transition: all 0.2s ease-in-out;
 }
 
 * {
@@ -17,7 +28,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   width: 100%;
   min-height: 100vh;
 
@@ -30,4 +41,45 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.section {
+  width: 100%;
+  padding: 0 var(--space-5);
+}
+
+.btn {
+  width: fit-content;
+  padding: 0.5rem var(--space-1);
+  font-weight: 600;
+}
+
+.btn__primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  font-weight: 600;
+  border-radius: 0.3rem;
+  transition: var(--transition);
+}
+
+.btn__primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  transition: var(--transition);
+}
+
+.btn__transparent {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  border-radius: 0.3rem;
+  transition: var(--transition);
+}
+
+.btn__transparent:hover {
+  background-color: var(--color-border);
+  color: var(--color-text-primary);
+  transition: var(--transition);
 }
