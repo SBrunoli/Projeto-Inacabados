@@ -34,24 +34,23 @@ function Infos({ projects, categories }: InfosProps) {
     (project) => project.progress >= 100,
   ).length;
 
+  const infos = [
+    { value: totalProjects, label: "projetos parados" },
+    { value: `${averageProgress}%`, label: "Progresso médio ao parar" },
+    { value: activeCategories, label: "Categorias ativas" },
+    { value: completedProjects, label: "Projetos concluídos" },
+  ];
+
   return (
-    <section className={styles.infos}>
-      <div className={styles.infos__container}>
-        <span className={styles.infos__title}>{totalProjects}</span>
-        <span className={styles.infos__text}>projetos parados</span>
-      </div>
-      <div className={styles.infos__container}>
-        <span className={styles.infos__title}>{averageProgress}%</span>
-        <span className={styles.infos__text}>Progresso médio ao parar</span>
-      </div>
-      <div className={styles.infos__container}>
-        <span className={styles.infos__title}>{activeCategories}</span>
-        <span className={styles.infos__text}>Categorias ativas</span>
-      </div>
-      <div className={styles.infos__container}>
-        <span className={styles.infos__title}>{completedProjects}</span>
-        <span className={styles.infos__text}>Projetos concluídos</span>
-      </div>
+    <section className={`section ${styles.infos}`}>
+      {infos.map((info) => {
+        return (
+          <div className={styles.infos__box} key={info.label}>
+            <span className={styles.infos__number}>{info.value}</span>
+            <span className={styles.infos__label}>{info.label}</span>
+          </div>
+        );
+      })}
     </section>
   );
 }
