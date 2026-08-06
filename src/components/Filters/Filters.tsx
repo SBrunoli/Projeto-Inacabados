@@ -13,6 +13,8 @@ interface FiltersProps {
 }
 
 function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
+  const options = [{ id: "todos", label: "Todos" }, ...categories];
+
   // controla se o dropdown está aberto ou fechado (só importa no mobile)
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +29,7 @@ function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
   };
 
   return (
-    <div className={styles.filters}>
+    <section className={`section ${styles.filters}`}>
       {/* botão só aparece no mobile via CSS */}
       <button
         className={styles.filters__toggle}
@@ -37,28 +39,24 @@ function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
       </button>
 
       <ul
+        id="filter-list"
         className={`${styles.filters__list} ${isOpen ? styles["filters__list--open"] : ""}`}
       >
-        <li>
-          <button
-            className={`${styles.filters__button} ${activeCategory === "todos" ? styles["filters__button--active"] : ""}`}
-            onClick={() => handleSelect("todos")}
-          >
-            Todos
-          </button>
-        </li>
-        {categories.map((category) => (
-          <li key={category.id}>
+        {options.map(({ id, label }) => (
+          <li key={id}>
             <button
-              className={`${styles.filters__button} ${activeCategory === category.id ? styles["filters__button--active"] : ""}`}
-              onClick={() => handleSelect(category.id)}
+              type="button"
+              className={`${styles.filters__button} ${
+                activeCategory === id ? styles["filters__button--active"] : ""
+              }`}
+              onClick={() => handleSelect(id)}
             >
-              {category.label}
+              {label}
             </button>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
