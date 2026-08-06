@@ -43,7 +43,8 @@
 }
 
 .hero__search {
-  width: 30vw;
+  width: 100%;
+  max-width: 30rem;
   height: 3rem;
   margin-top: var(--space-4);
   padding: 0 0.3rem 0rem 1rem;
