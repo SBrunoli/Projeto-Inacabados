@@ -14,18 +14,18 @@ function Hero({
   searchValue,
 }: HeroProps) {
   return (
-    <section className={styles.hero}>
+    <section className={`section ${styles.hero}`}>
       {/* Categories and Projects */}
-      <ul className={styles.hero__infos}>
-        <li>{categoriesCount} categorias ativas</li>
-        <li>|</li>
-        <li>{stoppedProjectsCount} projetos parados</li>
-      </ul>
+      <div className={styles.hero__infos}>
+        <span>{categoriesCount} categorias ativas</span>
+        <span>|</span>
+        <span>{stoppedProjectsCount} projetos parados</span>
+      </div>
 
       {/* title */}
       <h1 className={styles.hero__title}>
-        Todo projeto abandonado{" "}
-        <span className={styles.hero__titleSpan}>já foi</span> uma vontade real.
+        Todo projeto abandonado <span className="accent">já foi</span> uma
+        vontade real.
       </h1>
 
       {/* description */}
@@ -36,18 +36,15 @@ function Hero({
       </p>
 
       {/* Button */}
-      <ul className={styles.hero__buttons}>
-        <li>
-          <a href="#" className={styles.hero__btn}>
-            Explorar Projetos
-          </a>
-        </li>
-        <li>
-          <a href="#" className={styles.hero__btnTransparent}>
-            Como funciona -&gt;
-          </a>
-        </li>
-      </ul>
+      <div className={styles.hero__buttons}>
+        <a href="#explore" className="btn btn__primary">
+          Explorar Projetos
+        </a>
+
+        <a href="#howItWorks" className="btn btn__transparent">
+          Como funciona <i className="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
 
       {/* search */}
       <div className={styles.hero__search}>

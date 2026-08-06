@@ -7,6 +7,7 @@ import Projects from "./components/Projects/Projects";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
 import PublishProject from "./components/PublishProject/PublishProject";
 import Footer from "./components/Footer/Footer";
+import styles from "./App.module.css";
 
 interface Project {
   id: number;
@@ -69,27 +70,29 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       <Header />
-      <Hero
-        categoriesCount={categories.length}
-        stoppedProjectsCount={projects.length}
-        searchValue={searched}
-        handleSearch={setSearched}
-      />
-      <Infos projects={projects} categories={categories} />
-      <Filters
-        activeCategory={category}
-        handleCategory={setCategory}
-        categories={categories}
-      />
-      <Projects
-        activeCategory={category}
-        projects={projects}
-        searchValue={searched}
-      />
-      <HowItWorks />
-      <PublishProject />
+      <main className={styles.main}>
+        <Hero
+          categoriesCount={categories.length}
+          stoppedProjectsCount={projects.length}
+          searchValue={searched}
+          handleSearch={setSearched}
+        />
+        <Infos projects={projects} categories={categories} />
+        <Filters
+          activeCategory={category}
+          handleCategory={setCategory}
+          categories={categories}
+        />
+        <Projects
+          activeCategory={category}
+          projects={projects}
+          searchValue={searched}
+        />
+        <HowItWorks />
+        <PublishProject />
+      </main>
       <Footer />
     </div>
   );

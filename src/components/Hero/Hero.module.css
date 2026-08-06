@@ -1,35 +1,36 @@
 .hero {
-  width: 100%;
   min-height: 40vh;
-  margin-top: 5rem;
-  padding: 0 3rem;
   background: transparent;
 }
 
 .hero__infos {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
 
   color: var(--color-primary);
   text-transform: uppercase;
   font-size: 0.8rem;
-  list-style: none;
 }
 
 .hero__title {
-  width: 45%;
+  max-width: 23ch;
+  width: 100%;
   font-size: 3.25rem;
   font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: -0.05rem;
   color: var(--color-text-primary);
-}
-
-.hero__titleSpan {
-  color: var(--color-primary);
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .hero__description {
-  width: 35%;
+  max-width: 75ch;
+  width: 100%;
   font-size: 0.9rem;
   color: var(--color-text-secondary);
 }
@@ -37,36 +38,14 @@
 .hero__buttons {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-
-  margin-top: 2rem;
-  list-style: none;
-}
-
-.hero__btn {
-  width: fit-content;
-
-  padding: 0.5rem 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-  font-weight: 600;
-  border-radius: 0.3rem;
-}
-
-.hero__btnTransparent {
-  width: fit-content;
-
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-text-primary);
-  border-radius: 0.3rem;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
 }
 
 .hero__search {
   width: 30vw;
   height: 3rem;
-  margin-top: 4rem;
+  margin-top: var(--space-4);
   padding: 0 0.3rem 0rem 1rem;
   border-radius: 0.3rem;
   background-color: var(--color-surface);
@@ -74,7 +53,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-1);
 }
 
 .hero__searchForm {
@@ -107,7 +86,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 var(--space-1);
   }
 
   .hero__title {
