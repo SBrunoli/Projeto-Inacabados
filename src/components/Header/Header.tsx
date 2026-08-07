@@ -10,7 +10,7 @@ function Header() {
 
       {/* links */}
       <nav aria-label="Navegação principal" className={styles.header__nav}>
-        <a href="#explore" className={styles.header__links}>
+        <a href="#projects" className={styles.header__links}>
           Explorar
         </a>
 

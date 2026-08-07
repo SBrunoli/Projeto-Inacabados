@@ -29,11 +29,14 @@ function Filters({ activeCategory, handleCategory, categories }: FiltersProps) {
   };
 
   return (
-    <section className={`section ${styles.filters}`}>
+    <section className={styles.filters}>
       {/* botão só aparece no mobile via CSS */}
       <button
+        type="button"
         className={styles.filters__toggle}
         onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
+        aria-controls="filter-list"
       >
         {activeLabel} {isOpen ? "▲" : "▼"}
       </button>

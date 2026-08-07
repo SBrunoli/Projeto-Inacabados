@@ -18,8 +18,8 @@ interface ProjectsProps {
   searchValue: string;
 }
 
-const INITIAL_VISIBLE = 10;
-const LOAD_STEP = 10;
+const INITIAL_VISIBLE = 6;
+const LOAD_STEP = 6;
 
 function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
@@ -62,7 +62,7 @@ function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {
 
       {hasMore && (
         <div className={styles.project__footer}>
-          <button className={styles.project__loadMore} onClick={handleLoadMore}>
+          <button className="btn btn__transparent" onClick={handleLoadMore}>
             Carregar mais projetos
           </button>
           <span className={styles.project__counter}>

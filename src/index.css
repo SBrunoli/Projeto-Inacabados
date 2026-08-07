@@ -19,6 +19,8 @@
   --font-body: "Poppins", sans-serif;
   --font-heading: "Unbounded", cursive;
 
+  --header-height: 80px;
+
   --transition: all 0.2s ease-in-out;
 }
 
@@ -27,6 +29,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   width: 100%;
@@ -48,10 +55,15 @@ a {
   padding: 0 var(--space-5);
 }
 
+#projects {
+  scroll-margin-top: var(--header-height, 4rem);
+}
+
 .btn {
   width: fit-content;
   padding: 0.5rem var(--space-1);
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn__primary {

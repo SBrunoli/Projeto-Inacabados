@@ -80,16 +80,18 @@ function App() {
           handleSearch={setSearched}
         />
         <Infos projects={projects} categories={categories} />
-        <Filters
-          activeCategory={category}
-          handleCategory={setCategory}
-          categories={categories}
-        />
-        <Projects
-          activeCategory={category}
-          projects={projects}
-          searchValue={searched}
-        />
+        <section id="projects" className="section">
+          <Filters
+            activeCategory={category}
+            handleCategory={setCategory}
+            categories={categories}
+          />
+          <Projects
+            activeCategory={category}
+            projects={projects}
+            searchValue={searched}
+          />
+        </section>
         <HowItWorks />
         <PublishProject />
       </main>

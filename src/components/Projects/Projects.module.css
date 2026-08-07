@@ -1,6 +1,5 @@
 .project {
-  width: 100%;
-  padding: 0 3rem 4rem;
+  margin-bottom: var(--space-5);
 }
 
 .project__grid {
@@ -10,29 +9,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: start;
-  gap: 2rem;
+  gap: var(--space-2);
 }
 
 .project__footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-top: 2.5rem;
-}
-
-.project__loadMore {
-  background: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  padding: 12px 24px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.15s ease,
-    color 0.15s ease;
+  gap: var(--space-1);
+  margin-top: var(--space-3);
 }
 
 .project__loadMore:hover {
@@ -47,9 +32,9 @@
 }
 
 .project__empty {
-  width: 90%;
-  padding: 1rem;
-  text-align: left;
+  width: min(90%, 45rem);
+  margin: 0 auto var(--space-5);
+  padding: 1.5rem 1.25rem;
   font-size: 1.2rem;
   color: var(--color-text-primary);
   background: var(--color-surface);

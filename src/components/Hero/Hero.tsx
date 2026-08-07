@@ -37,9 +37,9 @@ function Hero({
 
       {/* Button */}
       <div className={styles.hero__buttons}>
-        <a href="#explore" className="btn btn__primary">
-          Explorar Projetos
-        </a>
+          <a href="#projects" className="btn btn__primary">
+            Explorar Projetos
+          </a>
 
         <a href="#howItWorks" className="btn btn__transparent">
           Como funciona <i className="fa-solid fa-arrow-right-long"></i>

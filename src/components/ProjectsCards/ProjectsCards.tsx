@@ -1,5 +1,5 @@
 import ProgressBar from "../UI/ProgressBar/ProgressBar";
-import styles from "./ProjectsCars.module.css";
+import styles from "./ProjectsCards.module.css";
 
 interface Project {
   id: number;
@@ -37,7 +37,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         <span className={styles.projectCard__bottomAuthor}>
           por {project.author}
         </span>
-        <button className={styles.projectCard__bottomBtn}>Adotar</button>
+        <button className="btn btn__primary">Adotar</button>
       </div>
     </div>
   );
