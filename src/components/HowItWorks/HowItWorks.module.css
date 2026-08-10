@@ -1,39 +1,32 @@
 .howItWorks {
-  width: 100%;
-  height: fit-content;
-  padding: 0 3rem;
-
   display: flex;
   flex-direction: column;
 }
 
 .howItWorks__title {
-  width: 30%;
-  font-size: 1.7em;
+  width: 100%;
+  max-width: 30ch;
+  font-size: 2rem;
   color: var(--color-text-primary);
 }
 
 .howItWorks__cardsConteiner {
   width: 100%;
-  margin: 2rem 0;
+  margin: var(--space-2) 0;
 
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4rem;
+  gap: var(--space-4);
 }
 
-.howItWorks__cards {
+.howItWorks__card {
   width: 100%;
-  padding: 0.5rem;
+  padding: var(--space-05);
   border-left: 2px solid var(--color-primary);
 }
 
-.howItWorks__cardsSpan {
-  color: var(--color-primary);
-}
-
-.howItWorks__cardsTitle {
+.howItWorks__cardTitle {
   color: var(--color-text-primary);
   font-size: 1.2rem;
   font-weight: 500;
@@ -55,7 +48,7 @@
     align-items: stretch;
   }
 
-  .howItWorks__cards {
+  .howItWorks__card {
     flex: 1;
   }
 }

@@ -1,46 +1,52 @@
 import styles from "./HowItWorks.module.css";
 
+interface CardInfo {
+  id: string;
+  title: string;
+  description: string;
+}
+
 function HowItWorks() {
+  const cardInfos: CardInfo[] = [
+    {
+      id: "1",
+      title: "Publique o que você abandonou",
+      description:
+        "Conte em que ponto parou, por quê, e o que ainda falta para terminar.",
+    },
+    {
+      id: "2",
+      title: "Alguém se identifica e adota",
+      description:
+        "A pessoa vê exatamente onde você parou e decide se quer levar adiante.",
+    },
+    {
+      id: "3",
+      title: "O projeto ganha vida de novo",
+      description:
+        "Vocês trocam contexto, o novo dono assume, e o projeto sai do zero — porque nunca esteve nele.",
+    },
+  ];
+
   return (
-    <section className={styles.howItWorks}>
+    <section id="howItWorks" className={`section ${styles.howItWorks}`}>
       <h2 className={styles.howItWorks__title}>
         Da desistência de alguém até a continuação de outra pessoa.
       </h2>
 
       {/* HowItWorksCards */}
       <div className={styles.howItWorks__cardsConteiner}>
-        <div className={styles.howItWorks__cards}>
-          <span className={styles.howItWorks__cardsSpan}>01</span>
-          <h2 className={styles.howItWorks__cardsTitle}>
-            Publique o que você abandonou
-          </h2>
-          <p className={styles.howItWorks__cardDescription}>
-            Conte em que ponto parou, por quê, e o que ainda falta para
-            terminar.
-          </p>
-        </div>
-
-        <div className={styles.howItWorks__cards}>
-          <span className={styles.howItWorks__cardsSpan}>02</span>
-          <h2 className={styles.howItWorks__cardsTitle}>
-            Alguém se identifica e adota
-          </h2>
-          <p className={styles.howItWorks__cardDescription}>
-            A pessoa vê exatamente onde você parou e decide se quer levar
-            adiante.
-          </p>
-        </div>
-
-        <div className={styles.howItWorks__cards}>
-          <span className={styles.howItWorks__cardsSpan}>03</span>
-          <h2 className={styles.howItWorks__cardsTitle}>
-            O projeto ganha vida de novo
-          </h2>
-          <p className={styles.howItWorks__cardDescription}>
-            Vocês trocam contexto, o novo dono assume, e o projeto sai do zero —
-            porque nunca esteve nele.
-          </p>
-        </div>
+        {cardInfos.map((cardInfo) => {
+          return (
+            <div key={cardInfo.id} className={styles.howItWorks__card}>
+              <span className="accent">{cardInfo.id}</span>
+              <h3 className={styles.howItWorks__cardTitle}>{cardInfo.title}</h3>
+              <p className={styles.howItWorks__cardDescription}>
+                {cardInfo.description}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
