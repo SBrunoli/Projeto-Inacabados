@@ -1,17 +1,14 @@
 .PublishProject {
-  width: 100%;
-  height: fit-content;
-  padding: 0 3rem 4rem;
   margin-top: 5rem;
 }
 
 .PublishProject__box {
   width: 100%;
   min-height: 12rem;
-  padding: 0 3rem;
+  padding: 0 var(--space-3);
   background-color: var(--color-surface);
   border: 1px dashed var(--color-text-primary);
-  border-radius: 1rem;
+  border-radius: var(--radius-1);
 
   display: flex;
   flex-direction: row;
@@ -29,18 +26,11 @@
   color: var(--color-text-secondary);
 }
 
-.PublishProject__btn {
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  background-color: var(--color-primary);
-  color: var(--color-text-on-primary);
-}
-
 @media (max-width: 720px) {
   .PublishProject__box {
     text-align: center;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    gap: var(--space-2);
+    padding: var(--space-1);
   }
 }

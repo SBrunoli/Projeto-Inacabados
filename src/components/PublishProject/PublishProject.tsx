@@ -2,7 +2,7 @@ import styles from "./PublishProject.module.css";
 
 function PublishProject() {
   return (
-    <section className={styles.PublishProject}>
+    <section id="publish" className={`section ${styles.PublishProject}`}>
       <div className={styles.PublishProject__box}>
         <div>
           <h2 className={styles.PublishProject__title}>
@@ -14,8 +14,8 @@ function PublishProject() {
           </p>
         </div>
 
-        <a href="#" className={styles.PublishProject__btn}>
-          Publicar meu Projeto -&gt;
+        <a href="#" className="btn btn__primary">
+          Publicar meu Projeto <i className="fa-solid fa-arrow-right-long"></i>
         </a>
       </div>
     </section>
