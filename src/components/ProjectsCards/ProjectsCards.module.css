@@ -1,8 +1,8 @@
 .projectCard {
   width: 100%;
   min-height: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: var(--space-1);
+  border-radius: var(--radius-1);
   background-color: var(--color-surface);
   transition: transform 0.3s ease;
 }
@@ -37,7 +37,7 @@
   font-size: 1.2rem;
   color: var(--color-text-primary);
   font-weight: 500;
-  margin: 0.5rem 0;
+  margin: var(--space-05) 0;
 }
 
 .projectCard__reason {
@@ -49,7 +49,7 @@
 
 .projectCard__bottom {
   width: 100%;
-  margin-top: 2rem;
+  margin-top: var(--space-2);
 
   display: flex;
   justify-content: space-between;
