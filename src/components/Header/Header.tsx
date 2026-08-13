@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 function Header() {
   return (
     <header className={`section ${styles.header}`}>
       {/* logo */}
-      <a href="/" className={styles.header__logo}>
+      <Link to="/" className={styles.header__logo}>
         Inacaba<span className="accent">dos</span>
-      </a>
+      </Link>
 
       {/* links */}
       <nav aria-label="Navegação principal" className={styles.header__nav}>
@@ -24,9 +25,9 @@ function Header() {
       </nav>
 
       {/* Button */}
-      <a href="#" aria-label="Fazer login" className="btn btn__primary">
+      <Link to="/login" aria-label="Fazer login" className="btn btn__primary">
         Login
-      </a>
+      </Link>
     </header>
   );
 }

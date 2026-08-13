@@ -1,0 +1,249 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  width: 768px;
+  height: 500px;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-1);
+  overflow: hidden;
+}
+
+.formsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.form__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  padding: var(--space-2);
+  opacity: 0;
+  z-index: 1;
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+.form__boxActive {
+  opacity: 1;
+  z-index: 5;
+}
+
+.signUp__active .form__boxLogin {
+  transform: translateX(100%);
+}
+
+.form__boxSignup {
+  transform: translateX(0);
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: var(--space-05) 0;
+}
+
+.form__Input {
+  width: 80%;
+  height: 3rem;
+  background-color: var(--color-text-primary);
+  border: none;
+  padding-left: 0.2rem;
+  border-radius: var(--radius-1);
+  margin: var(--space-05) 0;
+  transition: var(--transition);
+}
+
+.form__Input:focus {
+  padding-left: var(--space-05);
+  transition: var(--transition);
+}
+
+.form__link {
+  color: var(--color-text-primary);
+  font-size: 0.8rem;
+  margin: var(--space-05) 0;
+  text-decoration: underline;
+}
+
+.form__btn {
+  width: fit-content;
+  padding: var(--space-05) var(--space-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-radius: var(--space-05);
+  border: none;
+  margin: var(--space-05) 0;
+  transition: var(--transition);
+}
+
+.form__toggle {
+  margin-top: var(--space-1);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  display: none;
+}
+
+.form__toggleBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.form__toggleBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.form__toggleBtn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.home__btn {
+  margin-top: var(--space-2);
+  width: fit-content;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.slider__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  transition: transform 0.6s ease-in-out;
+}
+
+.signUp__active .slider__wrapper {
+  transform: translateX(-100%);
+}
+
+.slider {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.signUp__active .slider {
+  transform: translateX(-50%);
+}
+
+.slider__box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--space-2);
+  color: var(--color-text-on-primary);
+  gap: var(--space-2);
+  text-align: center;
+  background-color: var(--color-primary);
+}
+
+.signUp__active .form__box {
+  transform: translateX(100%);
+}
+
+.slider__btn {
+  padding: var(--space-05) var(--space-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-radius: var(--space-05);
+  border: 1px solid var(--color-text-on-primary);
+  transition: var(--transition);
+}
+
+.slider__btn:hover {
+  background-color: var(--color-text-on-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 720px) {
+  .login {
+    padding: 0 var(--space-1);
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    min-height: 480px;
+  }
+
+  .formsContainer {
+    height: auto;
+  }
+
+  .form__box {
+    position: relative;
+    width: 100%;
+    padding: var(--space-1);
+    display: none;
+  }
+
+  .form__Input {
+    width: 100%;
+  }
+
+  .form__boxActive {
+    display: flex;
+  }
+
+  .form__toggle {
+    display: block;
+  }
+
+  .slider__wrapper {
+    display: none;
+  }
+
+  .signUp__active .form__box {
+    transform: none;
+  }
+}

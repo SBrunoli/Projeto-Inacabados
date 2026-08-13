@@ -1,102 +1,17 @@
-import { useEffect, useState } from "react";
-import Filters from "./components/Filters/Filters";
-import Hero from "./components/Hero/Hero";
-import Infos from "./components/Infos/Infos";
-import Header from "./components/Header/Header";
-import Projects from "./components/Projects/Projects";
-import HowItWorks from "./components/HowItWorks/HowItWorks";
-import PublishProject from "./components/PublishProject/PublishProject";
-import Footer from "./components/Footer/Footer";
-import styles from "./App.module.css";
-
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  progress: number;
-  stopped: string;
-  author: string;
-  reason: string;
-}
-
-interface Category {
-  id: string;
-  label: string;
-}
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
 
 function App() {
-  const [category, setCategory] = useState("todos");
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [searched, setSearched] = useState("");
-
-  const API_URL = "https://inacabados-api.onrender.com";
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [projectsResponse, categoriesResponse] = await Promise.all([
-          fetch(`${API_URL}/projects`),
-          fetch(`${API_URL}/categories`),
-        ]);
-
-        if (!projectsResponse.ok || !categoriesResponse.ok) {
-          throw new Error("Erro ao carregar os dados da API");
-        }
-
-        const projectsData = await projectsResponse.json();
-        const categoriesData = await categoriesResponse.json();
-
-        setProjects(projectsData);
-        setCategories(categoriesData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Erro inesperado");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
-
-  if (error) {
-    return <p>Erro: {error}</p>;
-  }
-
   return (
-    <div className={styles.app}>
-      <Header />
-      <main className={styles.main}>
-        <Hero
-          categoriesCount={categories.length}
-          stoppedProjectsCount={projects.length}
-          searchValue={searched}
-          handleSearch={setSearched}
-        />
-        <Infos projects={projects} categories={categories} />
-        <section id="projects" className="section">
-          <Filters
-            activeCategory={category}
-            handleCategory={setCategory}
-            categories={categories}
-          />
-          <Projects
-            activeCategory={category}
-            projects={projects}
-            searchValue={searched}
-          />
-        </section>
-        <HowItWorks />
-        <PublishProject />
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 
