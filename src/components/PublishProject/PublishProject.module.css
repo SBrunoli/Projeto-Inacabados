@@ -1,5 +1,5 @@
 .PublishProject {
-  margin-top: 5rem;
+  margin: var(--space-5) 0;
 }
 
 .PublishProject__box {
