@@ -10,6 +10,14 @@ Uma plataforma para adotar projetos abandonados de outras pessoas — código, m
 
 </div>
 
+<br/>
+
+<div align="center">
+  <a href="https://projeto-inacabados.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/▶_LIVE_PREVIEW-ffb86b?style=for-the-badge&labelColor=0b0b14&color=e8703a" alt="Live Preview" width="180" />
+  </a>
+</div>
+
 ---
 
 ## 📖 Sobre o projeto
