@@ -30,7 +30,7 @@ function Home() {
   const [error, setError] = useState<string | null>(null);
   const [searched, setSearched] = useState("");
 
-  const API_URL = "https://inacabados-api.onrender.com";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +57,7 @@ function Home() {
     };
 
     fetchData();
-  }, []);
+  }, [API_URL]);
 
   if (loading) {
     return <p>Carregando...</p>;
