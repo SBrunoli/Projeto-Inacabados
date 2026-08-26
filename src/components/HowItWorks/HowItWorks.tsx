@@ -24,7 +24,7 @@ function HowItWorks() {
       id: "3",
       title: "O projeto ganha vida de novo",
       description:
-        "Vocês trocam contexto, o novo dono assume, e o projeto sai do zero — porque nunca esteve nele.",
+        "Vocês trocam contexto, o novo dono assume e o projeto volta a andar, sem precisar começar do zero.",
     },
   ];
 
