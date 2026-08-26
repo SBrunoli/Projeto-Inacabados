@@ -18,7 +18,10 @@ interface ProjectsProps {
   searchValue: string;
 }
 
-const INITIAL_VISIBLE = 6;
+// Reaproveita INITIAL_VISIBLE do Projects de propósito: garante que o
+// número de skeletons sempre seja igual ao número de cards reais exibidos
+// inicialmente, mesmo que esse valor mude no futuro.
+export const INITIAL_VISIBLE = 6;
 const LOAD_STEP = 6;
 
 function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {

@@ -1,4 +1,3 @@
-// src/pages/Home/Home.tsx
 import { useEffect, useState } from "react";
 import Filters from "../../components/Filters/Filters";
 import Hero from "../../components/Hero/Hero";
@@ -6,6 +5,10 @@ import Infos from "../../components/Infos/Infos";
 import Projects from "../../components/Projects/Projects";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import PublishProject from "../../components/PublishProject/PublishProject";
+import ProjectCardSkeleton from "../../components/ProjectCardSkeleton/ProjectCardSkeleton";
+import { INITIAL_VISIBLE } from "../../components/Projects/Projects";
+import styles from "./Home.module.css";
+import InfosSkeleton from "../../components/InfosSkeleton/InfosSkeleton";
 
 interface Project {
   id: number;
@@ -59,10 +62,6 @@ function Home() {
     fetchData();
   }, [API_URL]);
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
-
   if (error) {
     return <p>Erro: {error}</p>;
   }
@@ -75,19 +74,35 @@ function Home() {
         searchValue={searched}
         handleSearch={setSearched}
       />
-      <Infos projects={projects} categories={categories} />
-      <section id="projects" className="section">
-        <Filters
-          activeCategory={category}
-          handleCategory={setCategory}
-          categories={categories}
-        />
-        <Projects
-          activeCategory={category}
-          projects={projects}
-          searchValue={searched}
-        />
-      </section>
+
+      {loading ? (
+        <>
+          <InfosSkeleton />
+
+          <div className={`section ${styles.skeleton__grid}`}>
+            {Array.from({ length: INITIAL_VISIBLE }).map((_, index) => (
+              <ProjectCardSkeleton key={index} />
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <Infos projects={projects} categories={categories} />
+          <section id="projects" className="section">
+            <Filters
+              activeCategory={category}
+              handleCategory={setCategory}
+              categories={categories}
+            />
+            <Projects
+              activeCategory={category}
+              projects={projects}
+              searchValue={searched}
+            />
+          </section>
+        </>
+      )}
+
       <HowItWorks />
       <PublishProject />
     </>
