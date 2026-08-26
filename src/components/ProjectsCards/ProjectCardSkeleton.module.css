@@ -20,51 +20,39 @@
   height: 12px;
   width: 70px;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__stop {
   height: 10px;
   width: 50px;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__title {
   height: 20px;
   width: 80%;
   border-radius: 4px;
-  background-color: var(--color-border);
   margin: var(--space-05) 0;
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__reason {
   height: 12px;
   width: 70%;
   border-radius: 4px;
-  background-color: var(--color-border);
   margin-bottom: 6px;
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__reasonShort {
   height: 12px;
   width: 45%;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__progressBar {
   height: 14px;
   width: 100%;
   border-radius: var(--radius-1);
-  background-color: var(--color-border);
   margin-top: var(--space-2);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeletonCard__bottom {
@@ -78,16 +66,4 @@
   height: 14px;
   width: 90px;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.4;
-  }
 }

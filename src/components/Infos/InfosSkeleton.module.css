@@ -19,30 +19,16 @@
   height: 2.1rem;
   width: 60px;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 .infosSkeleton__label {
   height: 1rem;
   width: 100px;
   border-radius: 4px;
-  background-color: var(--color-border);
-  animation: pulse 1.5s ease-in-out infinite;
 }
 
 @media (max-width: 720px) {
   .infosSkeleton {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.4;
   }
 }
