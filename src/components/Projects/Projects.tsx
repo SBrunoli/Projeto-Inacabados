@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../ProjectsCards/ProjectsCards";
+import ConfirmModal from "../UI/ConfirmModal/ConfirmModal";
+import type { Project } from "../../types/Project";
 import styles from "./Projects.module.css";
 
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  progress: number;
-  stopped: string;
-  author: string;
-  reason: string;
-}
+
 
 interface ProjectsProps {
   activeCategory: string;
@@ -26,6 +20,17 @@ const LOAD_STEP = 6;
 
 function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+  const [projectToAdopt, setProjectToAdopt] = useState<Project | null>(null);
+
+  // seta o ProjectToAdopt como o objeto e informações inteiras
+  function handleAdoptProject(project: Project) {
+    setProjectToAdopt(project);
+  }
+
+  // fecha modal
+  function closeModal() {
+    setProjectToAdopt(null);
+  }
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -58,8 +63,22 @@ function Projects({ activeCategory, projects, searchValue }: ProjectsProps) {
       ) : (
         <div className={styles.project__grid}>
           {visibleProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              //recebe o parametro do map como valor, que contém as informações do Projeto
+              adoptProject={() => handleAdoptProject(project)}
+            />
           ))}
+
+          {projectToAdopt && (
+            <ConfirmModal
+              closeModal={() => {
+                closeModal();
+              }}
+              project={projectToAdopt}
+            />
+          )}
         </div>
       )}
 

@@ -1,21 +1,13 @@
 import ProgressBar from "../UI/ProgressBar/ProgressBar";
 import styles from "./ProjectsCards.module.css";
-
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  progress: number;
-  stopped: string;
-  author: string;
-  reason: string;
-}
+import type { Project } from "../../types/Project";
 
 interface ProjectCardProps {
   project: Project;
+  adoptProject: () => void;
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, adoptProject }: ProjectCardProps) {
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectCard__top}>
@@ -37,7 +29,10 @@ function ProjectCard({ project }: ProjectCardProps) {
         <span className={styles.projectCard__bottomAuthor}>
           por {project.author}
         </span>
-        <button className="btn btn__primary">Adotar</button>
+        {/* passa para o elemento pai, as informações do projeto cujo o botao foi clicado */}
+        <button className="btn btn__primary" onClick={adoptProject}>
+          Adotar
+        </button>
       </div>
     </div>
   );
