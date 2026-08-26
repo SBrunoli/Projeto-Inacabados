@@ -5,10 +5,10 @@ import Infos from "../../components/Infos/Infos";
 import Projects from "../../components/Projects/Projects";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import PublishProject from "../../components/PublishProject/PublishProject";
-import ProjectCardSkeleton from "../../components/ProjectCardSkeleton/ProjectCardSkeleton";
+import ProjectCardSkeleton from "../../components/ProjectsCards/ProjectCardSkeleton";
+import InfosSkeleton from "../../components/Infos/InfosSkeleton";
 import { INITIAL_VISIBLE } from "../../components/Projects/Projects";
 import styles from "./Home.module.css";
-import InfosSkeleton from "../../components/InfosSkeleton/InfosSkeleton";
 
 interface Project {
   id: number;
@@ -74,7 +74,7 @@ function Home() {
         searchValue={searched}
         handleSearch={setSearched}
       />
-
+      {/* caso fecth esteja carregandi, renderiza o skeleton */}
       {loading ? (
         <>
           <InfosSkeleton />
@@ -102,7 +102,6 @@ function Home() {
           </section>
         </>
       )}
-
       <HowItWorks />
       <PublishProject />
     </>
